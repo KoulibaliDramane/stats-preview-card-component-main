@@ -1,0 +1,134 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Lexend Deca', sans-serif;
+    border: none;
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    width: 1000px;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 8px;
+}
+
+.text-box {
+    padding: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 110px;
+}
+
+#description {
+    margin-bottom: 50px;
+}
+
+
+.nbr-box {
+    display: flex;
+    gap: 50px;
+}
+.nbr-box div{
+    line-height: 1.5;
+}
+.nbr {
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+.text {
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.5;
+}
+#violet {
+    color: hsl(277, 64%, 61%);
+}
+
+.nbr-box .text {
+    text-transform: uppercase;
+}
+.image {
+    height: 412.96px;
+    position: relative;
+    display: inline-block;
+}
+.color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(276, 41%, 36%, 0.6);
+  }
+#desktop {
+    border-radius: 0 8px 8px 0;
+    width: 500px;
+}
+#mobile {
+    display: none;
+}
+
+@media screen and (max-width: 600px){
+    body {
+        height: auto;
+    }
+    .container {
+        flex-direction: column-reverse;
+        width: auto;
+        height: auto;
+        margin: 5%;
+    }
+    #desktop {
+        display: none;
+    }
+    #mobile {
+        display: block;
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+    .color-overlay {
+        border-radius: 8px 8px 0 0;
+    }
+    .image {
+        height: min-content;
+    }
+    .text-box {
+        padding: 6%;
+    }
+    .nbr-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .nbr-box div{
+        width: 100px;
+        text-align: center;
+    }
+    #description {
+        margin: 30px 0;
+        text-align: center;
+    }
+    h1 {
+        margin: 20px 0;
+        text-align: center;
+    }
+}
